@@ -14,8 +14,6 @@ RUN git clone https://github.com/ThorIgor/riffusion_test_task.git
 RUN python -m pip install --timeout 2000 riffusion_test_task/.
 RUN rm -r riffusion_test_task
 
-RUN python utils/download_model.py
-
 EXPOSE 8501
 
 CMD ["python", "-m", "streamlit", "run", "app.py"]

@@ -38,6 +38,15 @@ Also, you need to install [ffmpeg](https://www.ffmpeg.org/) and add it to the PA
 python -m streamlit run app.py
 ```
 
+# Start docker container
+
+Docker container require enought RAM to run riffusion model.
+
+```
+docker build -t clip_creation .
+docker run -p 8501:8501 clip_creation
+```
+
 # Implemantation notes
 
 * For splitting video into clips I used ffmpeg. Because ffmpeg can't read mp4 files directly as bytes I have to create temporary files. For this, I used tempfile python library. Therefore it's not the most efficient implementation.

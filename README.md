@@ -13,7 +13,7 @@ python -m venv .venv
 .venv\Scritps\activate
 
 # linux/mac
-source .venv\bin\activate
+source .venv/bin/activate
 ```
 
 Install python dependencies:

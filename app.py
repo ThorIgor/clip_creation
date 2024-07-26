@@ -95,7 +95,7 @@ if create_clip or 'create_clip' in st.session_state:
         clips[clip_with_music-1] = add_audio_to_clip(clips[clip_with_music-1], audio_bytes.read())
         st.session_state['clips'] = clips
 
-    if 'clips' in st.seesion_state:
+    if 'clips' in st.session_state:
         
         for i, clip in enumerate(st.session_state['clips']):
             out_cols[i%columns_out].video(clip, format="video/mp4")
@@ -106,4 +106,3 @@ if create_clip or 'create_clip' in st.session_state:
             file_name="clips.zip",
             mime="application/zip",
         )
-

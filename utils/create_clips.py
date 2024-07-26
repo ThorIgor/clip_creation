@@ -27,6 +27,10 @@ def get_video_duration(input_bytes) -> float:
 @st.cache_data()
 def split_video(input_bytes, extension, num_clips) -> list[bytes]:
     """Split video into num_clips chunks"""
+
+    if extension == "mkv":
+        extension = "matroska"
+
     duration = get_video_duration(input_bytes)
     clip_duration = duration / num_clips
     
